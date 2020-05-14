@@ -177,9 +177,10 @@
     :from_literal: --from-literal=<value>
     :name: <value>
 :create_cronjob:
-  :cmd: oc create cronjob <name>
+  :cmd: oc create cronjob <name> <global_options> <options>
   :options:
     :allow_missing_template_keys: --allow-missing-template-keys=<value>
+    :cmd: <value>
     :dry_run: --dry-run=<value>
     :image: --image=<value>
     :output: --output <value>
@@ -208,9 +209,10 @@
     :output: --output <value>
     :template: --template=<value>
 :create_job:
-  :cmd: oc create job <name>
+  :cmd: oc create job <name> <global_options> <options>
   :options:
     :allow_missing_template_keys: --allow-missing-template-keys=<value>
+    :cmd: <value>
     :dry_run: --dry-run=<value>
     :from: --from=<value>
     :image: --image=<value>
