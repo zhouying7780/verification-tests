@@ -38,7 +38,9 @@ Feature: basic verification for upgrade oc client testing
     Then the step should succeed
     Given I wait up to 30 seconds for the steps to pass:
     """
-    When I open web server via the "http://127.0.0.1:<%= cb[:port1] %>" url
+    Given the expression should be true> @host = localhost
+    And I run commands on the host:
+      | curl http://127.0.0.1:<%= cb[:port1] %> --noproxy "127.0.0.1" |
     Then the step should succeed
     And the output should contain:
       | Hello OpenShift! |
