@@ -34,7 +34,7 @@ Feature: deployment related features
   Scenario: Manually make deployment
     Given I have a project
     When I run the :create client command with:
-      | f | https://raw.githubusercontent.com/openshift-qe/v3-testfiles/master/deployment/manual.json |
+      | f | https://raw.githubusercontent.com/zhouying7780/v3-testfiles/master/deployment/manual.json |
     Then the step should succeed
     When I run the :rollout_status client command with:
       | resource | deploymentConfig |
